@@ -5,10 +5,12 @@ from llm import llm_model, tokenizer
 def prompt_formatter(query: str, resources: str) -> str:
     # Türkçe ve daha kapsamlı cevaplar için geliştirilen prompt
     base_prompt = f"""Aşağıdaki bağlam öğelerine dayanarak soruyu cevaplayınız.
-    Sorulara Türkçe cevap veriniz.
-    Cevaplarınız 512 token'ı aşmamalıdır.
-    Cevap verirken yalnızca ilgili bölümleri kullanarak düşüncelerinizi ve analizlerinizi gizleyiniz, sadece cevabınızı veriniz.
-    Cevabınız mümkün olduğunca ayrıntılı ve açıklayıcı olmalıdır.
+    Sorulara Türkçe, ayrıntılı, analitik ve derinlemesine cevap veriniz.
+    Cevaplarınız 2048 token'ı aşmamalıdır.
+    Cevap verirken yalnızca ilgili bölümleri kullanarak düşüncelerinizi ve analizlerinizi detaylandırınız, sadece cevabınızı veriniz.
+    Cevabınız mümkün olduğunca ayrıntılı, açıklayıcı ve gerekirse örneklerle desteklenmiş olmalıdır.
+    Lütfen gerekirse kaynaklardan alıntı yapınız ve gerekçelerinizi belirtiniz.
+    
     Aşağıdaki örnekleri ideal cevap tarzı olarak referans alınız:
     
     \nÖrnek 1:
@@ -43,7 +45,7 @@ def prompt_formatter(query: str, resources: str) -> str:
 
 def ask(prompt: str,
         temperature: float = 0.7,
-        max_new_tokens: int = 512,
+        max_new_tokens: int = 2048,
         format_answer_text=True,
         return_answer_only=True):
     """
@@ -58,7 +60,10 @@ def ask(prompt: str,
     outputs = llm_model.generate(**input_ids,
                                  temperature=temperature,
                                  do_sample=True,
-                                 max_new_tokens=max_new_tokens)
+                                 max_new_tokens=max_new_tokens,
+                                 repetition_penalty=1.15,
+                                 top_p=0.95,
+                                 top_k=50)
 
     # Çıktıyı metne dönüştür
     output_text = tokenizer.decode(outputs[0])
