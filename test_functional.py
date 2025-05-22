@@ -67,6 +67,46 @@ def test_pdf_qa_pipeline():
         {
             "question": "Kullanıcı yönetimi kapsamında hangi özellikler yer almaktadır?",
             "expected": "Yeni kullanıcılar için kayıt sistemi ve mevcut kullanıcılar için güvenli kimlik doğrulama özellikleri yer almaktadır."
+        },
+        {
+            "question": "Projenin paydaşları kimlerdir ve her birinin temel gereksinimi nedir?",
+            "expected": "Paydaşlar yatırımcılar, yazılım geliştiriciler, borsa şirketleri ve SPK'dır. Yatırımcılar için güvenilirlik ve kullanıcı dostu arayüz, geliştiriciler için güçlü altyapı ve güvenlik, borsa şirketleri için şeffaflık ve verimlilik, SPK için ise regülasyonlara uygunluk ve denetim kolaylığı gereklidir."
+        },
+        {
+            "question": "Proje kapsamında hangi güvenlik önlemleri alınacaktır?",
+            "expected": "Kullanıcı verilerinin şifrelenmesi, veri gizliliği ve uyumluluk, SPK ve borsa mevzuatına uygunluk, Firebase Security Rules ve token bazlı erişim kontrolü gibi güvenlik önlemleri alınacaktır."
+        },
+        {
+            "question": "Projenin yönetim şekli ve ana sorumluları kimlerdir?",
+            "expected": "Proje merkezi yönetimle yürütülmektedir. Proje sahibi Bahri Akçan, karar verici Ömer Faruk Ağtoprak, proje yöneticisi Melih Ulusoy'dur."
+        },
+        {
+            "question": "Proje için belirlenen temel Gantt şeması ve kritik yol nedir?",
+            "expected": "Kritik yol A->B->C->E->F->H->I olarak belirlenmiştir ve kritik gün sayısı 19'dur. Gantt şeması ile faaliyetlerin zamanlaması ve bağımlılıkları planlanmıştır."
+        },
+        {
+            "question": "Proje kapsamında hangi test türleri uygulanacaktır?",
+            "expected": "Birim testleri, entegrasyon testleri, performans testleri, güvenlik testleri ve kullanıcı kabul testleri uygulanacaktır."
+        },
+        {
+            "question": "Proje için öngörülen ana risklerden biri olan 'veritabanı yapısının hatalı olması' nasıl yönetilecektir?",
+            "expected": "Veri yapısı JSON formatında önceden test edilecek, veritabanı tasarımı modüler olacak ve kritik veri için yedekleme ve geri yükleme senaryoları uygulanacaktır."
+        },
+        {
+            "question": "Proje maliyet tahmini için hangi model kullanılmıştır ve temel sonuçlar nelerdir?",
+            "expected": "COCOMO 1 modeli kullanılmıştır. Projenin tamamlanması için yaklaşık 12.54 kişi-hafta iş gücü ve ortalama 2 tam zamanlı çalışan gerekmektedir."
+        },
+        {
+            "question": "Proje kapsamında hangi raporlama ve analiz özellikleri sunulacaktır?",
+            "expected": "Kullanıcıların işlem geçmişi ve portföy performans raporları, finansal analiz ve piyasa trend raporları sunulacaktır."
+        },
+        {
+            "question": "Proje kapsamında hangi platform desteği sağlanacaktır?",
+            "expected": "Mobil uygulamalar (Android) ve masaüstü uygulamalar ile geniş kitlelere erişim sağlanacaktır."
+        },
+        {
+            "question": "Proje risk yönetimi kapsamında alınan önlemlerden birini açıklayınız.",
+            "expected": "Test süreçlerinin erken başlatılması, güvenlik testleri ve kullanıcı kabul testleri için ön hazırlık yapılması, kalan faaliyetler için risk senaryoları oluşturulması gibi önlemler alınacaktır."
         }
     ]
 
