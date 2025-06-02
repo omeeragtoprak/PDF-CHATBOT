@@ -1,10 +1,12 @@
-transformers 
-sentence-transformers 
-torch 
-spacy 
-huggingface_hub \ numpy 
-pandas 
-faiss-cpu 
-pymupdf 
-streamlit 
+transformers
+sentence-transformers
+torch
+spacy
+huggingface_hub
+numpy
+pandas
+faiss-cpu
+pymupdf
+streamlit
 tqdm
+pytest
