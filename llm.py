@@ -5,7 +5,7 @@ from transformers import BitsAndBytesConfig
 from huggingface_hub import login
 
 # Login HuggingFace Hub
-login(token="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")
+login(token="")
 
 # Create the model
 model_id = "google/gemma-2-2b-it"
