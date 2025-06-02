@@ -78,7 +78,7 @@ streamlit run main.py
 ## 5. Testler
 Projeyi fonksiyonel olarak test etmek için:
 ```bash
-pytest test_functional.py
+pytest -s test_functional.py
 ```
 > Not: Testler için `test_dataset.pdf` dosyasının klasörde bulunması gerekir.
 
